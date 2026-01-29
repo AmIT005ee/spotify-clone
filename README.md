@@ -19,7 +19,7 @@ A responsive Spotify Web Player UI clone built using **HTML & CSS**.
 
 
 ## 🌐 Live Demo
-(Add GitHub Pages link here)
+https://amit005ee.github.io/spotify-clone/
 
 ## 📚 What I Learned
 - CSS layout structuring
