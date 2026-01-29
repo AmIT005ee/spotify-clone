@@ -1,0 +1,441 @@
+/* =====================================================
+   GLOBAL STYLES (Applied to entire page)
+===================================================== */
+body{
+  font-family: "Montserrat", sans-serif;
+  margin:0;
+  padding: 0;
+}
+
+/* =====================================================
+   MAIN LAYOUT CONTAINER
+   Holds sidebar, main content, and music player
+===================================================== */
+.main{
+  background-color: black;
+  color: white;
+  height:100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+/* =====================================================
+   SIDEBAR SECTION (Left navigation area)
+===================================================== */
+.sidebar{
+  background-color: black;
+  width:320px;
+  border-radius: 1rem;
+}
+
+/* =====================================================
+   MAIN CONTENT AREA (Center content)
+===================================================== */
+.main-content{
+  background-color: #232323;
+  flex:1;
+  border-radius: 1rem;
+  overflow: auto;
+  padding:0 1.25rem;
+  margin-top: 0.4rem;
+}
+
+/* =====================================================
+   MUSIC PLAYER (Bottom fixed player bar)
+===================================================== */
+.music-player{
+  background-color: #121212;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  height:90px;
+  display:flex;
+}
+
+/* =====================================================
+   NAVIGATION MENU (Home & Search)
+===================================================== */
+.nav{
+  background-color: #121212;
+  margin:0.5rem;
+  height:100px;
+  border-radius: 1rem;
+  padding-top:0.75rem;
+  padding-left: 1.5rem;
+}
+
+/* Home section */
+.home{
+  margin-top:0.5rem;
+  margin-bottom: 1.75rem;
+}
+.home a{
+  text-decoration: none;
+  color:white;
+  margin-left: 0.75rem;
+  font-weight: 600;
+}
+.home i{
+  font-size: 1.25rem;
+}
+
+/* Search section */
+.search{
+  opacity:0.7;
+}
+.search:hover{
+  opacity:1;
+}
+.search a{
+  text-decoration: none;
+  color:white;
+  margin-left: 0.75rem;
+  font-weight: 600;
+}
+.search i{
+  font-size: 1.25rem;
+}
+
+/* =====================================================
+   LIBRARY SECTION
+===================================================== */
+.library{
+  background-color: #121212;
+  height: 100%;
+  border-radius: 1rem;
+  margin:0.5rem;
+}
+
+/* Library header (icon + buttons) */
+.options{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  padding-top: 1rem;
+}
+
+/* Library icon */
+.lib-icon{
+  opacity:0.7;
+  cursor:pointer;
+}
+.lib-icon:hover{
+  opacity:1;
+}
+.lib-icon img {
+  height:1.5rem;
+  margin-left:10px;
+}
+.lib-icon a{
+  text-decoration: none;
+  color:white;
+  margin:1rem;
+  font-weight: 500;
+}
+
+/* Plus & arrow icons */
+.plusright i{
+   margin-left:1.5rem;
+   font-size: 18px;
+   opacity:0.7;
+   cursor: pointer;
+}
+.plusright i:hover{
+  opacity:1;
+}
+
+/* =====================================================
+   PLAYLIST / PODCAST BOXES
+===================================================== */
+.box1{
+  background-color: #232323;
+  padding:1.2rem;
+  border-radius:1rem;
+  margin:0.5rem
+}
+
+.box1 #h4{
+  margin-top:0;
+}
+
+.p1{
+  font-size: 13px;
+  margin-bottom: 1.25rem;
+}
+
+/* Reusable button style */
+.badge{
+  background-color: white;
+  color:black;
+  border:none;
+  padding:0.6rem 1.25rem;
+  border-radius:2rem;
+  font-weight: 700;
+  cursor:pointer;
+}
+.badge:hover{
+  transform: scale(1.05);
+}
+
+.box2{
+  margin-top: 1.75rem;
+}
+
+/* =====================================================
+   STICKY TOP NAVIGATION BAR
+===================================================== */
+.sticky-nav{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 5rem;
+  position:sticky;
+  top:0;
+  background-color: #232323;
+}
+
+/* Buttons on right */
+.btns .badge{
+  margin:0 0.3rem;
+}
+.badge i{
+  padding-right: 0.5rem;
+  font-size: 16px;
+}
+.fa-regular{
+  margin-left:0.5rem;
+}
+
+/* Black install button */
+.blackbtn{
+  background-color: black;
+  color:white;
+}
+
+/* Back & forward icons */
+.sticky-nav .forback img{
+  margin-right: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive behavior for navbar */
+@media(max-width:1000px){
+  .sticky-nav .for{
+    display:none;
+  }
+  .sticky-nav .btn1{
+    display:none;
+  }
+}
+
+@media(max-width:800px){
+  .sidebar{
+    display:none;
+  }
+}
+
+/* =====================================================
+   SONG / PLAYLIST CARDS
+===================================================== */
+.cards-container{
+  background-color: #121212;
+  display: flex;
+  width:135px;
+  padding:1rem;
+  border-radius:0.5rem;
+  cursor:pointer;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card img{
+  width:100%;
+  border-radius:0.5rem;
+}
+
+.card p{
+  font-size: 13px;
+  margin-top:-10px;
+  line-height: 1.5rem;
+}
+
+/* Card hover animation */
+.cards-container:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 1px 2px 4px black;
+}
+
+/* Card wrapper */
+.main-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* =====================================================
+   FOOTER SECTION
+===================================================== */
+.footer{
+  height:300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line{
+  height:55%;
+  width:90%;
+  border-top:1px solid white;
+  opacity:0.4;
+}
+
+/* =====================================================
+   MUSIC PLAYER - CENTER PART (Controls + Progress)
+===================================================== */
+.player{
+  width:50%;
+}
+
+.player-controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.player-controls img{
+  height:1rem;
+  margin-right: 2.5rem;
+  cursor: pointer;
+}
+
+/* Control hover effects */
+.player-control-icon1:hover{
+  transform: scale(1.2);
+}
+
+/* Play button */
+.player-control-icon3{
+  transform: scale(2.2);
+  opacity:0.7;
+  cursor:pointer;
+}
+.player-control-icon3:hover{
+  transform: scale(2.3);
+  opacity:1;
+}
+
+/* Progress bar */
+.playback-bar{
+  display: flex;
+  margin-top: 1.25rem;
+  justify-content: center;
+}
+
+.player #progress-bar{
+  appearance: none;
+  width:65%;
+  background-color: transparent;
+  cursor:pointer;
+}
+
+#progress-bar::-webkit-slider-runnable-track{
+  background-color: #ddd;
+  border-radius: 100px;
+  height:0.2rem;
+}
+
+#progress-bar::-webkit-slider-thumb{
+  appearance: none;
+  height: 1rem;
+  width:1rem;
+  background-color: #1bd760;
+  border-radius: 50%;
+  margin-top: -6px;
+}
+
+/* =====================================================
+   MUSIC PLAYER - LEFT PART (Album info)
+===================================================== */
+.album{
+  width:25%;
+  background-color: #121212;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.album img{
+  height:5rem;
+  margin-left:-0.5rem;
+  border-radius:0.5rem;
+}
+
+.album p{
+  font-size: 0.85rem;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+
+.album i:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/* =====================================================
+   MUSIC PLAYER - RIGHT PART (Volume & extra controls)
+===================================================== */
+.controls{
+  width:25%;
+  background-color: #121212;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+
+.controls i:hover{
+  transform: scale(1.2);
+}
+
+/* Volume slider */
+#volume-bar{
+  appearance:none;
+}
+#volume-bar::-webkit-slider-runnable-track{
+  height:5px;
+  background-color: #1bd760;
+}
+#volume-bar::-webkit-slider-thumb{
+  appearance: none;
+}
+#volume-bar{
+  display: flex;
+  align-items: center;
+}
+
+.fa-volume-high{
+  margin-right:-1.5rem
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN FOR MUSIC PLAYER
+===================================================== */
+@media(max-width:1000px){
+  .controls{
+    display: none;
+  }
+}
+
+@media(max-width:800px){
+  .album{
+    display: none;
+  }
+  .music-player{
+    justify-content: center;
+  }
+  .music-player .playback-bar{
+    width: 90%;
+  }
+}
