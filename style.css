@@ -38,8 +38,12 @@ body{
   overflow: auto;
   padding:0 1.25rem;
   margin-top: 0.4rem;
+  padding-bottom: 100px;
 }
 
+.main-content::-webkit-scrollbar {
+  display: none;
+}
 /* =====================================================
    MUSIC PLAYER (Bottom fixed player bar)
 ===================================================== */
@@ -239,14 +243,17 @@ body{
    SONG / PLAYLIST CARDS
 ===================================================== */
 .cards-container{
-  background-color: #121212;
+  background-color: #232323;
   display: flex;
-  width:135px;
+  width:160px;
+  height: 285px;
   padding:1rem;
   border-radius:0.5rem;
   cursor:pointer;
-  margin-right: 1rem;
+  margin-right: 0.1rem;
   margin-bottom: 1rem;
+  min-width: 135px;       /* IMPORTANT */
+  flex-shrink: 0;   
 }
 
 .card img{
@@ -259,35 +266,104 @@ body{
   margin-top:-10px;
   line-height: 1.5rem;
 }
+.card h4{
+  font-weight: 550;
+  font-size: 0.93rem;
+
+}
 
 /* Card hover animation */
 .cards-container:hover{
   transform: scale(1.05);
   transition: transform 0.3s ease;
-  box-shadow: 1px 2px 4px black;
+  box-shadow: 1px 2px 6px #121212;
 }
 
 /* Card wrapper */
 .main-container{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;      /* ❌ no wrapping */
+  overflow-x: auto;       /* ✅ horizontal scroll */
+  overflow-y: hidden;
+  gap: 16px;   
+  scroll-behavior: smooth;
+}
+
+.main-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Round container popular */
+.round-container{
+  background-color: #232323;
+  display: flex;
+  width:160px;
+  height: 230px;
+  padding:1rem;
+  border-radius:0.5rem;
+  cursor:pointer;
+  margin-right: 0.1rem;
+  margin-bottom: 1rem;
+  min-width: 135px;       /* IMPORTANT */
+  flex-shrink: 0;   
+}
+
+.round-container img{
+  width:100%;
+  border-radius:50%;
+}
+
+.round-container:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 1px 2px 6px #121212;
 }
 
 /* =====================================================
    FOOTER SECTION
 ===================================================== */
-.footer{
-  height:300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer {
+  background: linear-gradient(to bottom, #232323, #232323);
+  padding: 60px 80px 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-family: Arial, sans-serif;
+  
 }
 
-.line{
-  height:55%;
-  width:90%;
-  border-top:1px solid white;
-  opacity:0.4;
+/* main row */
+.line {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+/* each column */
+.col h4 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+/* links */
+.col p {
+  color: #b3b3b3;
+  font-size: 15px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.col p:hover {
+  color: #ffffff;
+}
+
+/* bottom text */
+.copyright {
+  color: #777;
+  font-size: 13px;
 }
 
 /* =====================================================
