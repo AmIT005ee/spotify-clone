@@ -15,7 +15,8 @@ A responsive Spotify Web Player UI clone built using **HTML & CSS**.
 - Font Awesome
 
 ## 📸 Screenshots
-<img width="2863" height="1534" alt="image" src="https://github.com/user-attachments/assets/6da37244-6075-435f-bea2-0360b12d7258" />
+<img width="2879" height="1530" alt="image" src="https://github.com/user-attachments/assets/11a38507-f523-4d78-84e8-f549fc6491e3" />
+
 
 
 ## 🌐 Live Demo
